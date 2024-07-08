@@ -17,7 +17,7 @@ def check_note():
     note = request.json.get('note')
 
     # Predict XSS for the note
-    prediction_xss = predict_xss([note.lower()])
+    prediction_xss = predict_xss(note)
 
     response = {
         "is_xss": bool(prediction_xss),
