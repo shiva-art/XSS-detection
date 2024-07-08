@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Allow Cross-Origin Resource Sharing
 
 # Load the best model
-model = joblib.load('best_xss_model_count_vectorizer.pkl')
+model = joblib.load('best_xss_model_count_vectorizer_v1.pkl')
 
 def predict_xss(sentence):
     return model.predict([sentence])[0]
