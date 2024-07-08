@@ -18,7 +18,7 @@ def check_note():
     #print(f"Received note: {note}")
 
     # Predict XSS for the note
-    prediction_xss = predict_xss(note)
+    prediction_xss = predict_xss([note.lower()])
     #print(f"Prediction: {prediction_xss}")
 
     response = {
