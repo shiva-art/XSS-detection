@@ -15,11 +15,9 @@ def predict_xss(sentence):
 @app.route('/note', methods=['POST'])
 def check_note():
     note = request.json.get('note')
-    #print(f"Received note: {note}")
 
     # Predict XSS for the note
     prediction_xss = predict_xss([note.lower()])
-    #print(f"Prediction: {prediction_xss}")
 
     response = {
         "is_xss": bool(prediction_xss),
